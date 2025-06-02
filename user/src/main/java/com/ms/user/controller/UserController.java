@@ -23,7 +23,8 @@ public class UserController {
     @PostMapping("/users")
     public ResponseEntity<User> createUser(@RequestBody @Valid UserRecordDTO userRecordDTO) {
         User user = new User();
-        BeanUtils.copyProperties(userRecordDTO, user);
+        user.setName(userRecordDTO.name());
+        user.setEmail(userRecordDTO.email());
 
         return ResponseEntity.status(HttpStatus.CREATED).body(userService.saveUser(user));
     }

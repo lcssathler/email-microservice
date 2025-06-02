@@ -19,7 +19,7 @@ public class UserPublisher {
         EmailDTO emailDTO = new EmailDTO();
 
         emailDTO.setUserUUID(user.getId());
-        emailDTO.setEmailTO(user.getEmail());
+        emailDTO.setEmailTo(user.getEmail());
         emailDTO.setSubject("Registration successfully");
         emailDTO.setText(String.format("Hello, %s! You registration was successfully", user.getName()));
 

@@ -3,7 +3,7 @@ package com.ms.email.dto;
 import java.util.UUID;
 
 public record EmailRecordDTO(UUID userUUID,
-                             String emailTO,
+                             String emailTo,
                              String subject,
                              String text) {
 
